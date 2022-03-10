@@ -99,18 +99,10 @@ StyledElement parseStyledElement(
       );
       break;
     case "blockquote":
-      //TODO(Sub6Resources) this is a workaround for collapsing margins. Remove.
-      if (element.parent!.localName == "blockquote") {
-        styledElement.style = Style(
-          margin: const EdgeInsets.only(left: 40.0, right: 40.0, bottom: 14.0),
-          display: Display.BLOCK,
-        );
-      } else {
-        styledElement.style = Style(
-          margin: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 14.0),
-          display: Display.BLOCK,
-        );
-      }
+      styledElement.style = Style(
+        margin: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 14.0),
+        display: Display.BLOCK,
+      );
       break;
     case "body":
       styledElement.style = Style(
